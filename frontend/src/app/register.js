@@ -6,7 +6,7 @@ angular
       const $ctrl = this;
 
       $ctrl.submit = function () {
-        TimeCapsuleApi.register($ctrl.email, $ctrl.password)
+        TimeCapsuleApi.register($ctrl.user.email, $ctrl.user.password)
           .then(function () {
             $state.go('home');
           })

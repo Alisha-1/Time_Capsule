@@ -52,7 +52,7 @@ angular
         },
         test: function () {
           return doRequest('GET', '/test');
-        },
+        }
       };
     };
   });
