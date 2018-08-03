@@ -1,0 +1,32 @@
+<form ng-submit="$ctrl.submit()" name="userRegister">
+  <div>
+    <label for="email">Email</label>
+    <input
+      id="email"
+      ng-model="$ctrl.user.email"
+      type="email"
+      ng-required="true"
+    />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input
+      id="password"
+      ng-model="$ctrl.user.password"
+      type="password"
+      ng-required="true"
+    />
+  </div>
+  <div>
+    <label for="confirm-password">Confirm password</label>
+    <input
+      id="confirm-password"
+      ng-pattern="$ctrl.user.password"
+      ng-required="true"
+      type="password"
+      ng-model="$ctrl.confirmPassword"
+    />
+  </div>
+  <button ng-disabled="!userRegister.$valid" type="submit">Submit</button>
+  <button ng-click="$ctrl.reset()">Reset</button>
+</form>

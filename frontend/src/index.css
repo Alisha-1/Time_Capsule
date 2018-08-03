@@ -1,0 +1,7 @@
+body {
+  background-color: lightgrey;
+}
+
+form .ng-invalid {
+  border: 1px solid red;
+}

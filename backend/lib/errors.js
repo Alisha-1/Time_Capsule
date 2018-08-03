@@ -19,8 +19,24 @@ class InvalidRequestError extends Error {
   }
 }
 
+class IncorrectTokenError extends Error {
+  constructor(...args) {
+    super(args);
+    this.code = 400;
+  }
+}
+
+class UnauthorizedError extends Error {
+  constructor(...args) {
+    super(args);
+    this.code = 403;
+  }
+}
+
 module.exports = {
   NotFoundError,
   UnexpectedError,
-  InvalidRequestError
+  InvalidRequestError,
+  IncorrectTokenError,
+  UnauthorizedError
 };
